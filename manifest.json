@@ -1,12 +1,27 @@
-{
+{ 
     "manifest_version":2,
     "version": "0.1",
     "name": "Planner Night Mode",
     "description": "Extensão para Planner Microsoft",
     "author": "Fernando Fábio F Freire",
-    "browser_action":{
-        "default_title": "Planner Night Mode",
-        "default_popup": "index.html"
-    
-    }
+    "background": 
+    {  
+        "matches" : ["*://tasks.office.com/*"],
+        "scripts": ["background.js"]
+    },
+    "content_scripts":[
+        {
+            "matches" : [ "*://tasks.office.com/*"],
+            "js" : ["jquery.min.js","content.js"],
+            "run_at": "document_end"
+        }
+    ],
+   
+    "browser_action": {
+        "name": "Planner Night Mode", 
+        "default_popup": "index.html",
+        "default_title": "Planner Night Mode"
+         },
+         "permissions": [ "*://tasks.office.com/*"]
 }
+      
