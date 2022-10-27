@@ -1,0 +1,12 @@
+{
+    "manifest_version":2,
+    "version": "0.1",
+    "name": "Planner Night Mode",
+    "description": "Extensão para Planner Microsoft",
+    "author": "Fernando Fábio F Freire",
+    "browser_action":{
+        "default_title": "Planner Night Mode",
+        "default_popup": "index.html"
+    
+    }
+}
