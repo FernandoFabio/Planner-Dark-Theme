@@ -1,5 +1,3 @@
-setTimeout(() => {
-    chrome.runtime.sendMessage({loadTheme: "true"}, function(response) {
-        console.log(response.message);
-      });
-}, 2000);
+chrome.runtime.sendMessage({message: "messageSent"}, function (response) {
+  console.log(response);
+});
