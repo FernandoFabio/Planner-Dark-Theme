@@ -1,9 +1,92 @@
+setTimeout(() => {
+  
+
 $("body").append(`<style id='my-custom-dark-style'>
             .mectrl_header 
             {
                 color: #fff;
             }
+
             
+            .dynamicLink:hover{
+                background-color: #3d3d3d;
+                border-color: orange;
+            }
+            .dynamicLink:hover ~ .ol.ms-Breadcrumb-list{
+                background-color: #3d3d3d!important;
+                
+            }
+            .dynamicLink:hover ~ .ol.ms-Breadcrumb{
+                background-color: #3d3d3d!important;
+                
+            }
+            .dynamicLink:hover ~ .ol.ms-Breadcrumb-item{
+                background-color: #3d3d3d!important;
+                
+            }
+            .dynamicLink:hover ~ .ol.ms-TooltipHost{
+                background-color: #3d3d3d!important;
+                
+            }
+
+            span.ms-Breadcrumb-item{
+                background-color: #3d3d3d!important;
+            }
+            .ms-Breadcrumb-chevron{
+                background-color: #3d3d3d!important;
+                color:orange!important;
+            }
+
+            
+            .dynamicLink:active{
+                background-color: #3d3d3d;
+                border-color: orange;
+            }
+            li.dynamicLink:focus{
+                background-color: #3d3d3d;
+                border-color: orange;
+                
+            }
+            li.dynamicLink{
+                background-color: #3d3d3d;
+                
+                
+            }
+
+            .filterSections{
+                background-color: #9b9b9b;
+            }
+            .filterTitle{
+                color:white;
+            }
+
+            .user:hover{
+                background-color: #3d3d3d;
+                border-width: -61px;
+                border: 2px;
+                border-color: orange;
+                border-style: dashed;
+            }
+            .ms-Breadcrumb-item{
+                background-color: #3d3d3d; 
+            }
+
+            .ms-Breadcrumb:hover{
+                background-color: #3d3d3d;
+            }
+            .ms-Breadcrumb{
+                background-color: #3d3d3d;
+            }
+            .ol.ms-Breadcrumb-list{
+                background-color: #3d3d3d;
+            }
+
+            .noanimation {
+                -webkit-animation: none !important;
+                -moz-animation: none !important;
+                -o-animation: none !important;
+                animation: none !important;
+              }
             .theme-light .ms-Modal.taskEditor-dialog.plannerAppDialog .taskEditor-dialog-container {
                 background-color: #3d3d3d;
                 border-radius: 1em;
@@ -21,12 +104,16 @@ $("body").append(`<style id='my-custom-dark-style'>
                 color:orange!important;
             }
 
+            ul li.active{
+                background-color: #3d3d3d;
+                border-color: orange;
+               }
+
             .linkTextSection{
+                background-color:important;
            color:white!important;
             }
-            .linkTextSection:hover{
-                background-color:#3d3d3d!important;
-            }
+            
             .plannerIcon{
                 color:white!important; 
             }
@@ -39,14 +126,16 @@ $("body").append(`<style id='my-custom-dark-style'>
             }
             
             .ms-Button-label{
-                color:white!important;
+                color:#3d3d3d!important;
             }
             .calendarLabel{
                 color:white!important;
             }
             .ms-TooltipHost{
                 color: orange!important;
+                background-color:#3d3d3d;
             }
+            
 
             .appContent,.appContent .sideNav .plannerLeftNav,.appContent .sideNav .plannerLeftNav .content,body > div > div > div.appContent > div div > div.content
             {
@@ -76,7 +165,8 @@ $("body").append(`<style id='my-custom-dark-style'>
             }
             .css-56 .leftNavItem
             {
-                color: white;
+                background-color:gray!important;
+                color: gray!important;
             }
             .css-56:hover .leftNavItem
             {
@@ -84,7 +174,12 @@ $("body").append(`<style id='my-custom-dark-style'>
             }
             .theme-light .plannerLeftNav>.content>.leftNavStaticLinksGroup>li:hover .linkContents span.leftNavItem
             {
+                background-color:gray!important;
                 color: black;
+            }
+
+            span.leftNavItem{
+                background-color:#3d3d3d!important;
             }
             .theme-light .plannerLeftNav>.content>.leftNavStaticLinksGroup>li:hover>a>.linkContents>.outerPaddingRemove>.icon {
                 color:black;
@@ -175,10 +270,12 @@ $("body").append(`<style id='my-custom-dark-style'>
             #planner-main-content .nonIcon .primarySection .contextInfoSectionContainer .ms-TooltipHost
             {
                 color: white;
+                background-color: #3d3d3d;
             }
             .ms-Layer.ms-Layer--fixed .ms-Dialog-main.taskEditor-dialog-container .taskEditor-dialog-content .assignedToUsers .ms-Persona-details .ms-Persona-primaryText .ms-TooltipHost
             {
                 color: white;
+                background-color: #3d3d3d;
             }
             #planner-main-content .nonIcon .secondarySection .pivotLink span
             {
@@ -212,7 +309,8 @@ $("body").append(`<style id='my-custom-dark-style'>
             }
             .theme-light .sideNav>.footer .chevron ,.theme-light .sideNav>.footer:hover .leftNavItem
             {
-                color: white;
+                background-color:gray!important;
+                color: gray!important;
             }
             .theme-light .sideNav>.footer:hover {
                 color: black;
@@ -220,6 +318,7 @@ $("body").append(`<style id='my-custom-dark-style'>
             }
             .theme-light .sideNav>.footer:hover .leftNavItem,.theme-light .sideNav>.footer:hover .chevron 
             {
+                background-color:gray!important;
                 color: black;
             }
             .taskBoardCard:hover
@@ -332,7 +431,7 @@ $("body").append(`<style id='my-custom-dark-style'>
             }
             .theme-light .peoplePicker>.ms-Callout-main>div>.userLists>.userListSection>.userList>.user:not(.readOnly):hover .ms-Persona-primaryText
             {
-                color : black;
+                color : white;
             }
             .theme-light .peoplePicker>.ms-Callout-main>div .ms-Persona-primaryText
             {
@@ -430,13 +529,35 @@ $("body").append(`<style id='my-custom-dark-style'>
             .theme-light .taskCard>.container>.textContent>.bottomBar
             {
                 background-color: #7f7f7f;
-                background: linear-gradient(180deg, #727272, #7e7e7e);
+                background: linear-gradient(180deg, #727272, orange);
             }
-            .theme-light .taskCard>.container>.textContent>.bottomBar:not(.readOnly):hover 
+            .theme-light .taskCard>.container>.textContent>.bottomBar:hover
             {
-                background-color: #f3f2f1 !important;
-                background: inherit;
+                
+                background: linear-gradient(180deg, #727272, #7373b2)!important;
             }
+           .ms-Callout-main{
+            background-color: #3d3d3d!important;
+           }
+
+           .membersTitle,.sectionTitle{
+            color:white;
+           }
+           .sectionTitle{
+            background-color: #3d3d3d!important;
+            border-color: orange!important;
+            border-radius: 50%;
+            color:white;
+           }
+           
+
+          
+           .memberCard:hover{
+            background-color: #3d3d3d!important;
+            border-color: orange!important;
+            border-radius: 50%;
+            color:white;
+           }
             .theme-light .taskCard>.container>.textContent>.bottomBar>.assignmentControl>.label>.ms-Persona>.ms-Persona-details>.ms-Persona-primaryText {
                 color: white;
             }
@@ -605,3 +726,5 @@ $("body").append(`<style id='my-custom-dark-style'>
                 color:white;
             }
             </style>`);
+
+        }, 2000);

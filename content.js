@@ -1,5 +1,7 @@
-setTimeout(() => {
-    chrome.runtime.sendMessage({loadTheme: "true"}, function(response) {
-        console.log(response.message);
-      });
-}, 2000);
+console.log("content");
+var s = document.createElement('idioma');
+s.src = chrome.runtime.getURL('idioma.js');
+s.onload = function() {
+    this.remove();
+};
+(document.head || document.documentElement).appendChild(s);
