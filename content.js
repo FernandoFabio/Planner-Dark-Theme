@@ -1,3 +1,7 @@
-chrome.runtime.sendMessage({message: "messageSent"}, function (response) {
-  console.log(response);
-});
+console.log("content");
+var s = document.createElement('idioma');
+s.src = chrome.runtime.getURL('idioma.js');
+s.onload = function() {
+    this.remove();
+};
+(document.head || document.documentElement).appendChild(s);

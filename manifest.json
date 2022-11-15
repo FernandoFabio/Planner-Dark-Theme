@@ -8,7 +8,8 @@
     "matches": [
       "*://tasks.office.com/*"
     ],
-    "service_worker": "service_worker.js"
+    "service_worker": "background.js"
+    
   },
   "content_scripts": [
     {
@@ -19,6 +20,7 @@
         "jquery.min.js",
         "content.js",
         "css_dark.js"
+    
       ],
       "run_at": "document_end"
     }
@@ -26,9 +28,6 @@
   "icons": {
     "128": "icon128.png"
   },
-  "permissions": [
-    "*://tasks.office.com/*"
-  ],
   "action": {
     "name": "Planner Night Mode",
     "default_popup": "index.html",
@@ -38,5 +37,12 @@
   "content_security_policy": {},
   "host_permissions": [
     "*://tasks.office.com/*"
-  ]
+  ],
+  
+  "permissions": ["webRequest", "webNavigation","scripting"],
+  "web_accessible_resources": [{
+    "resources": ["idioma.js"],
+    "matches": ["<all_urls>"]
+  }]
+ 
 }
